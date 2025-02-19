@@ -40,9 +40,9 @@ func main() {
 			UpdatedById: 1,
 		}
 		alRecord.Code = removeWrap(tr.Find("td").Eq(0).Text())
-		alRecord.Name = tr.Find("td").Eq(1).Find("a span").Eq(0).Text()
-		alRecord.Camp = tr.Find("td").Eq(2).Text()
-		alRecord.ShipType = tr.Find("td").Eq(3).Text()
+		alRecord.Name = removeWrap(tr.Find("td").Eq(1).Find("a span").Eq(0).Text())
+		alRecord.Camp = removeWrap(tr.Find("td").Eq(2).Text())
+		alRecord.ShipType = removeWrap(tr.Find("td").Eq(3).Text())
 		alRecord.TechPointGet, err = strconv.ParseInt(removeWrap(tr.Find("td").Eq(4).Text()), 10, 64)
 		if err != nil {
 			log.Panic(err)

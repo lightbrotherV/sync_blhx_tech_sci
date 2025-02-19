@@ -1,0 +1,2 @@
+# sync_blhx_tech_sci
+从wifi同步碧蓝航线所有船科技点到mysql中，方便统计科技点

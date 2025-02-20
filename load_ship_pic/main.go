@@ -18,7 +18,7 @@ func main() {
 		return
 	}
 	// 拉取仓库舰娘图片
-	i := conf.AdbSetting.Total // 截图总数
+	i := conf.AdbSetting.PicTotal // 截图总数
 	for ; i > 0; i-- {
 		err = nextShip()
 		if err != nil {

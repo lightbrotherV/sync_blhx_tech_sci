@@ -15,8 +15,14 @@ type databaseSetting struct {
 	Database string
 }
 
+type adbSetting struct {
+	Path  string
+	Total int
+}
+
 var (
 	DatabaseSetting = &databaseSetting{}
+	AdbSetting      = &adbSetting{}
 	cfg             *ini.File
 )
 
@@ -32,6 +38,7 @@ func LoadConfig() {
 		panic(fmt.Sprintf("init cfg failed, when load cfg file, err:%s", err.Error()))
 	}
 	mapTo("db", DatabaseSetting)
+	mapTo("adb", AdbSetting)
 }
 
 func mapTo(section string, target any) {

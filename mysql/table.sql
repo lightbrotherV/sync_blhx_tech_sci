@@ -18,7 +18,7 @@ CREATE TABLE `azur_lane` (
                              `attribute_name_lv120` varchar(255) DEFAULT NULL, --120级后 解锁的属性类型 eg:命中
                              `attribute_get` bigint DEFAULT '0', --获得舰船属性加成值
                              `attribute_lv120` bigint DEFAULT '0', --舰船120级后获得属性值
-                             `is_get_tech` varchar(255) DEFAULT NULL, --是否已获取科技点标识
+                             `is_get_tech` varchar(255) DEFAULT NULL, --是否已获取科技点标识 1.目前无法满破   2.120级满破  3.正在练  4.没船  5.125级 满破  6.125级 没满破  7.有船 没练
                              PRIMARY KEY (`id`),
                              UNIQUE KEY `code` (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

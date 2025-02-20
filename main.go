@@ -38,6 +38,7 @@ func main() {
 			UpdatedAt:   now,
 			CreatedById: 1,
 			UpdatedById: 1,
+			IsGetTech:   "4",
 		}
 		alRecord.Code = removeWrap(tr.Find("td").Eq(0).Text())
 		alRecord.Name = removeWrap(tr.Find("td").Eq(1).Find("a span").Eq(0).Text())

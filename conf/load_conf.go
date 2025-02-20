@@ -16,8 +16,8 @@ type databaseSetting struct {
 }
 
 type adbSetting struct {
-	Path  string
-	Total int
+	Path     string
+	PicTotal int
 }
 
 var (

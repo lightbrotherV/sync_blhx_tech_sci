@@ -65,7 +65,7 @@ func nextShip() (err error) {
 func screencap(i int) (err error) {
 	originPath := "/sdcard/screen.png"
 	// 截图
-	cmd := exec.Command("adb", "screencap", originPath)
+	cmd := exec.Command("adb", "shell", "screencap", originPath)
 	var errBuff bytes.Buffer
 	cmd.Stderr = &errBuff
 	err = cmd.Run()

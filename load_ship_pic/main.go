@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"github.com/davecgh/go-spew/spew"
 	"github.com/gookit/goutil/fsutil"
 	"log"
 	"os"
@@ -12,6 +13,7 @@ import (
 
 func main() {
 	conf.LoadConfig()
+	spew.Dump(conf.AdbSetting)
 	err := connectAdb()
 	if err != nil {
 		fmt.Println("connectAdb: ", err)

@@ -8,6 +8,7 @@ import (
 	"os"
 	"os/exec"
 	"sync_azur_lane/conf"
+	"time"
 )
 
 func main() {
@@ -25,6 +26,7 @@ func main() {
 			fmt.Println("nextShip: ", err)
 			return
 		}
+		time.Sleep(time.Millisecond * 500)
 		err = screencap(i)
 		if err != nil {
 			fmt.Println("screencap: ", err)
